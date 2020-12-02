@@ -4,12 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Profile Card Component Deeply</title>
 </head>
 <body>
     <div class="card-wrapper">
-        <div class="">
-            <h1>hey</h1>
+        <img src="./assets/images/bg-pattern-top.svg" class="bg-pattern top" alt="background pattern image">
+        <img src="./assets/images/bg-pattern-bottom.svg" class="bg-pattern bottom" alt="background pattern image">
+        <div class="card">
+            <div class="card__head">
+                <div class="avatar">
+                    <img src="./assets/images/image-victor.jpg" alt="">
+                </div>
+            </div>
+            <div class="card__body">
+                <div class="username">
+                    <span class="username__name strong">
+                        Victor Crest
+                    </span>
+                    <span class="username__age light">26</span>
+                </div>
+                <div class="user-location">
+                    London
+                </div>
+            </div>
+            <div class="card__footer">
+                <div class="footer__item followers">
+                    <p class="strong">80k</p>
+                    <small>Followers</small>
+                </div>
+                <div class="footer__item likes">
+                    <p class="strong">803k</p>
+                    <small>Likes</small>
+                </div>
+                <div class="footer__item photos">
+                    <p class="strong">1.4k</p>
+                    <small>Photos</small>
+                </div>
+            </div>
         </div>
     </div>
 </body>

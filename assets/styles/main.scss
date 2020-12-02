@@ -1,5 +1,141 @@
 @import './reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
+:root {
+    --primary-color  : hsl(185, 75%, 39%);
+    --secondary-color: hsl(229, 23%, 23%);
+    --extra-color    : hsl(227, 10%, 46%);
+    --neutral-color  : hsl(0, 0%, 59%);
+    --white          : #fff;
+}
+
+* {
+    font-family: 'Kumbh Sans',
+        sans-serif !important;
+}
+
+html {
+    font-size: 18px;
+    color    : var(--secondary-color);
+
+}
 
 .card-wrapper {
-    background-color: #bada55;
+    height          : 100vh;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    background-color: var(--primary-color);
+    position        : relative;
+    overflow        : hidden;
+
+    .card {
+        background-color  : var(--white);
+        width             : 25%;
+        height            : 52%;
+        border-radius     : 18px;
+        display           : grid;
+        grid-template-rows: 1fr 40% 1fr;
+        overflow          : hidden;
+        position          : relative;
+        z-index           : 100;
+        box-shadow        : 0px 25px 130px #2d32485c;
+
+        &__head {
+            background-image: url('../images/bg-pattern-card.svg');
+            display         : flex;
+            justify-content : center;
+            align-items     : flex-end;
+
+            .avatar {
+                transform    : translateY(50%);
+                height       : 96px;
+                border       : 5px solid white;
+                border-radius: 50%;
+                overflow     : hidden;
+
+                img {
+                    width : auto;
+                    height: 100%;
+                }
+            }
+
+        }
+
+        &__body {
+            display        : flex;
+            justify-content: flex-end;
+            align-items    : center;
+            flex-direction : column;
+
+            .username {
+                font-size    : 1rem;
+                margin-bottom: .5rem;
+
+                &__name {}
+
+                &__age {
+                    color: var(--neutral-color);
+                }
+            }
+
+            .user-location {
+                color        : var(--neutral-color);
+                margin-bottom: 1rem;
+            }
+        }
+
+        &__footer {
+            border-top     : 1px solid #f2f2f2;
+            display        : flex;
+            align-items    : center;
+            justify-content: space-around;
+
+            .footer__item {
+                text-align: center;
+
+                p {
+                    text-transform: uppercase;
+                    margin-bottom : .25rem;
+                }
+
+                small {
+                    font-size: .8rem;
+                    color    : var(--neutral-color);
+                }
+            }
+
+        }
+    }
+
+    .bg-pattern {
+        position: absolute;
+
+        &.top {
+            top      : 0;
+            left     : 0;
+            transform: translate(-20%, -60%);
+        }
+
+        &.bottom {
+            bottom   : 0;
+            right    : 0;
+            transform: translate(20%, 60%);
+        }
+    }
+
+    @media (max-width: 375px) {
+        .card {
+            width: 87%;
+        }
+    }
+}
+
+.strong {
+
+    font-weight: 700;
+}
+
+.light {
+    font-weight: 400;
 }
